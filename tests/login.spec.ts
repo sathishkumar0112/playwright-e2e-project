@@ -13,11 +13,11 @@ test.beforeEach(async ({page}) => {
 
 test("login",async({page})=>{
 
-   
+   //login test successfull
     const loginPage=new Login_successful(page)
     await loginPage.login_success(testdata.username, testdata.password)
     await expect(page.locator('.app_logo')).toHaveText('Swag Labs')    
-
+//product add successfull
     const Product_Page=new ProductsPage(page)
      await Product_Page.Product_Addcart()
 
